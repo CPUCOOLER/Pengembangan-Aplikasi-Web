@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengembangan Aplikasi Web Latihan 2.3</title>
+  </head>
+  <body>
+    <div id="output">
+      <h1 id="judul">Indeks Nilai</h1>
+      <p>Silahkan masukkan Nilai :</p>
+      <input type="number" min="0" id="nilai" required />
+      <p>Nilai : <span id="indeks"></span></p>
+      <button onclick="checkValue()">Tampilkan Indeks</button>
+    </div>
+
+    <script type="text/javascript">
+      const checkValue = () => {
+        let value = Number(document.getElementById("nilai").value);
+
+        if (value >= 85 && value <= 100) {
+          document.getElementById("indeks").innerHTML = "A";
+        } else if (value >= 80 && value <= 85) {
+          document.getElementById("indeks").innerHTML = "A-";
+        } else if (value >= 75 && value <= 80) {
+          document.getElementById("indeks").innerHTML = "B+";
+        } else if (value >= 70 && value <= 75) {
+          document.getElementById("indeks").innerHTML = "B";
+        } else if (value >= 65 && value <= 70) {
+          document.getElementById("indeks").innerHTML = "B-";
+        } else if (value >= 60 && value <= 65) {
+          document.getElementById("indeks").innerHTML = "C";
+        } else if (value >= 50 && value <= 60) {
+          document.getElementById("indeks").innerHTML = "D";
+        } else if (value <= 50) {
+          document.getElementById("indeks").innerHTML = "E";
+        } else {
+          document.getElementById("indeks").innerHTML = "Tidak Terdefinisi";
+        }
+      };
+    </script>
+  </body>
+</html>
